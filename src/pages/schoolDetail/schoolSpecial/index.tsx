@@ -55,11 +55,6 @@ export default function SchoolSpecial() {
             key: 'level',
         },
         {
-            title: '门类',
-            dataIndex: 'ml',
-            key: 'ml',
-        },
-        {
             title: '专业类',
             dataIndex: 'zyl',
             key: 'zyl',
