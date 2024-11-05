@@ -7,10 +7,10 @@ const { Title, Paragraph, Text, Link } = Typography
 export default function SpecialIntro({ specialDetail }: { specialDetail: any }) {
 
     const satisfactionList = [
-        { name: '办学条件满意度', value: specialDetail.educationConditions_satisfaction },
-        { name: '教学质量满意度', value: specialDetail.teachingQuality_satisfaction },
-        { name: '就业满意度', value: specialDetail.jobRate_satisfaction },
-        { name: '综合满意度', value: specialDetail.overall_satisfaction }
+        { name: '办学条件', value: specialDetail.educationConditions_satisfaction },
+        { name: '教学质量', value: specialDetail.teachingQuality_satisfaction },
+        { name: '就业质量', value: specialDetail.jobRate_satisfaction },
+        { name: '综合评分', value: specialDetail.overall_satisfaction }
     ]
 
     const manRate = specialDetail.manRate.split(':')
@@ -36,17 +36,19 @@ export default function SpecialIntro({ specialDetail }: { specialDetail: any }) 
                         }
                     </Space>
                 </div>
-                <Card hoverable className={styles.textBox}>
-                    <Typography>
-                        <Title level={3}>专业简介</Title>
-                        <Title level={4}>是什么</Title>
-                        <Paragraph>{specialDetail.is_what}</Paragraph>
-                        <Title level={4}>学什么</Title>
-                        <Paragraph>{specialDetail.learn_what}</Paragraph>
-                        <Title level={4}>做什么</Title>
-                        <Paragraph>{specialDetail.do_what}</Paragraph>
-                    </Typography>
-                </Card>
+                <div className={styles.textBox}>
+                    <Card hoverable >
+                        <Typography>
+                            <Title level={3}>专业简介</Title>
+                            <Title level={4}>是什么</Title>
+                            <Paragraph>{specialDetail.is_what}</Paragraph>
+                            <Title level={4}>学什么</Title>
+                            <Paragraph>{specialDetail.learn_what}</Paragraph>
+                            <Title level={4}>做什么</Title>
+                            <Paragraph>{specialDetail.do_what}</Paragraph>
+                        </Typography>
+                    </Card>
+                </div>
                 <Card hoverable className={styles.textBox}>
                     <Typography>
                         <Title level={3}>专业详解</Title>

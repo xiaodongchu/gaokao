@@ -207,7 +207,7 @@ export default function SchoolIntro({ schoolDetail }: { schoolDetail: SchoolDeta
         num_doctor
     } = schoolDetail
 
-    const scoreList = ['学习指数', '生活指数', '就业指数', '综合指数']
+    const scoreList = ['学习', '生活', '就业', '综合']
     const numList = ['重点实验室', '国家重点学科', '硕士点', '博士点']
 
     return (
