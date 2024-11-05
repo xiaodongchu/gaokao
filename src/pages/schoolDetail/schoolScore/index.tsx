@@ -9,8 +9,8 @@ export default function SchoolScore() {
     const navigate = useNavigate()
     const { schoolId } = useParams()
     const [schoolList, setSchoolList] = useState([])
-    const [selectYear, setSelectYear] = useState('2022')
-    const [selectProvince, setSelectProvince] = useState('北京')
+    const [selectYear, setSelectYear] = useState('2024')
+    const [selectProvince, setSelectProvince] = useState('内蒙古')
     const [messageApi, contextHolder] = message.useMessage();
 
     const yearSelectOption =

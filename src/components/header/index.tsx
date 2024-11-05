@@ -58,15 +58,17 @@ export default function Header() {
         <>
             {contextHolder}
             <div className={styles.header}>
-                <menu>
-                    <Link to="/school">高校</Link>
-                    <Link to="/special">专业</Link>
-                    <Link to="/recommend">志愿推荐</Link>
-                </menu>
+                <div className={styles.menu_first}>
+                    <menu>
+                        <Link to="/school">高校</Link>
+                        <Link to="/special">专业</Link>
+                        <Link to="/recommend">志愿推荐</Link>
+                    </menu>
+                </div>
                 <div className={styles.info}>
-                    {info.isFirst === 1 ? <span style={{ marginRight: '10px' }}>请先填写高考信息</span>
+                    {info.isFirst === 1 ? <span style={{marginRight: '10px'}}>请先填写高考信息</span>
                         :
-                        <div style={{ margin: '0 5px' }} onClick={() => setModalOpen(true)} className={styles.gaokaoInfo} >
+                        <div style={{margin: '0 5px'}} onClick={() => setModalOpen(true)} className={styles.gaokaoInfo}>
                             <Tooltip title="点击编辑高考信息">
                                 {info.values.province}
                                 <Divider style={{margin: '0 5px'}} type="vertical"/>
@@ -77,13 +79,13 @@ export default function Header() {
                             </Tooltip>
                         </div>
                     }
-                    <div className={styles.menu1}>
-                        <Menu style={{ backgroundColor: 'inherit' }} onClick={onMenuClick} items={items} mode="horizontal" />
-                    </div>
                 </div>
-                <VolunModal volunModalOpen={volunModalOpen} setVolunModalOpen={setVolunModalOpen} />
-                <InfoModal modalOpen={modalOpen} setModalOpen={setModalOpen} />
-            </div >
+                <div className={styles.menu1}>
+                    <Menu style={{backgroundColor: 'inherit'}} onClick={onMenuClick} items={items} mode="horizontal"/>
+                </div>
+            </div>
+            <VolunModal volunModalOpen={volunModalOpen} setVolunModalOpen={setVolunModalOpen}/>
+            <InfoModal modalOpen={modalOpen} setModalOpen={setModalOpen}/>
         </>
 
 
