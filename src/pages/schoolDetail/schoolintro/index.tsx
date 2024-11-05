@@ -167,7 +167,7 @@ export default function SchoolIntro({ schoolDetail }: { schoolDetail: SchoolDeta
     const [messageApi, contextHolder] = message.useMessage();
 
     const loadSchoolImgName = async () => {
-        const res = await axiosInstance.get(`/getSchoolImg/${schoolId}`)
+        const res = await axiosInstance.get(`/getSchoolImg/${schoolId}.jpg`)
         if (res.data.code === 200) {
             messageApi.open({
                 type: 'success',
@@ -221,10 +221,10 @@ export default function SchoolIntro({ schoolDetail }: { schoolDetail: SchoolDeta
                         effect="fade">
                         {schoolImgName.map((item, index) => (
                             <Image
-                                style={{objectFit: 'cover'}}
+                                style={{objectFit: 'cover', borderRadius: '8px', alignItems: 'center'}}
                                 key={index}
-                                width={400}
-                                height={300}
+                                width={300}
+                                height={150}
                                 src={`http://10.242.61.169:8000/images_back/${schoolId}.jpg`}
                             />
                         ))}
