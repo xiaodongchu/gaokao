@@ -116,7 +116,7 @@ export default function SchoolDetail() {
                         >
                             <Image
                                 width={120}
-                                src={`http://localhost:8000/images/${schoolId}.jpg`}
+                                src={`http://10.242.61.169:8000/images/${schoolId}.jpg`}
                             />
                             <div className={styles.schoolBasic}>
                                 <div className={styles.name}>{schoolDetail.name}</div>

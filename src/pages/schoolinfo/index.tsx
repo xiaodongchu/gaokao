@@ -133,7 +133,7 @@ export default function SchoolInfo() {
                                     >
                                         <Image
                                             width={50}
-                                            src={`http://localhost:8000/images/${item.id}.jpg`}
+                                            src={`http://10.242.61.169:8000/images/${item.id}.jpg`}
                                         />
                                         <div className={styles.schoolBasic}>
                                             <div className={styles.title}>

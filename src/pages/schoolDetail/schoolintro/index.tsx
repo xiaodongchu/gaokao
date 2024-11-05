@@ -225,7 +225,7 @@ export default function SchoolIntro({ schoolDetail }: { schoolDetail: SchoolDeta
                                 key={index}
                                 width={400}
                                 height={300}
-                                src={`http://localhost:8000/images_back/${schoolId}.jpg`}
+                                src={`http://10.242.61.169:8000/images_back/${schoolId}.jpg`}
                             />
                         ))}
                     </Carousel>
