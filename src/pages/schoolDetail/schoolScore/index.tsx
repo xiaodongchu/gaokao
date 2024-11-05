@@ -4,6 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom'
 import { Select, Table, Result, message } from 'antd'
 import { ProvinceContext } from '../../../utils/context'
 import axios from 'axios'
+import axiosInstance from "../../../router/axiosInstance";
 export default function SchoolScore() {
     const navigate = useNavigate()
     const { schoolId } = useParams()
@@ -29,7 +30,7 @@ export default function SchoolScore() {
     }
 
     const loadSchoolSpecialList = async () => {
-        const res = await axios.post('http://localhost:8000/getSchoolSpecialPlan', {
+        const res = await axiosInstance.post('/getSchoolSpecialPlan', {
             schoolId: schoolId,
             year: selectYear,
             province: selectProvince

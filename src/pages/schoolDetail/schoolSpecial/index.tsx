@@ -4,6 +4,7 @@ import { Link, useParams } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import styles from './index.module.css'
 import axios from 'axios'
+import axiosInstance from "../../../router/axiosInstance";
 
 
 export default function SchoolSpecial() {
@@ -18,7 +19,7 @@ export default function SchoolSpecial() {
 
 
     const loadSpecialList = async () => {
-        const res = await axios.get(`http://localhost:8000/getSchoolOpenSpecial/${schoolId}`)
+        const res = await axiosInstance.get(`/getSchoolOpenSpecial/${schoolId}`)
 
         if (res.data.code === 200) {
             messageApi.open({

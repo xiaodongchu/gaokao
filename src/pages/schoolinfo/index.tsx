@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { ProvinceContext } from '../../utils/context';
 import axios from 'axios'
 import styles from './index.module.css'
+import axiosInstance from "../../router/axiosInstance";
 
 const { Search } = Input
 const { Meta } = Card
@@ -26,7 +27,7 @@ export default function SchoolInfo() {
     selectOptions.unshift({ label: '全部', value: '全部' })
     const loadSchoolList = async () => {
         console.log(selectProvince, searchValue, radioValue, curPage)
-        const res = await axios.post('http://localhost:8000/getSchoolList', {
+        const res = await axiosInstance.post('/getSchoolList', {
             province: selectProvince,
             school_name: searchValue,
             school_class: radioValue,

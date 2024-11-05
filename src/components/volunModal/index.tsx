@@ -10,7 +10,7 @@ export default function VolunModal({ volunModalOpen, setVolunModalOpen }: { volu
     const [messageApi, contextHolder] = message.useMessage();
 
     const loadSchoolList = async () => {
-        const res = await axiosInstance.get(`http://localhost:8000/getVolunteer/`)
+        const res = await axiosInstance.get(`/getVolunteer/`)
         if (res.data.code === 200) {
             messageApi.open({
                 type: 'success',
@@ -30,7 +30,7 @@ export default function VolunModal({ volunModalOpen, setVolunModalOpen }: { volu
     }, [volunModalOpen])
 
     const onDelete = async (school_id: any) => {
-        const res = await axios.post(`http://localhost:8000/delVolunteer`, {
+        const res = await axiosInstance.post(`/delVolunteer`, {
             school_id: school_id,
             username: username
         })

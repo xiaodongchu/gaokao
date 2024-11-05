@@ -4,6 +4,7 @@ import { Carousel, Image, Card, Statistic, Row, Col, Typography, message } from 
 import { useParams } from "react-router-dom"
 import ReactECharts from 'echarts-for-react';
 import styles from './index.module.css'
+import axiosInstance from "../../../router/axiosInstance";
 
 const { Title, Paragraph, Text, Link } = Typography
 
@@ -166,7 +167,7 @@ export default function SchoolIntro({ schoolDetail }: { schoolDetail: SchoolDeta
     const [messageApi, contextHolder] = message.useMessage();
 
     const loadSchoolImgName = async () => {
-        const res = await axios.get(`http://localhost:8000/getSchoolImg/${schoolId}`)
+        const res = await axiosInstance.get(`/getSchoolImg/${schoolId}`)
         if (res.data.code === 200) {
             messageApi.open({
                 type: 'success',
@@ -224,8 +225,7 @@ export default function SchoolIntro({ schoolDetail }: { schoolDetail: SchoolDeta
                                 key={index}
                                 width={500}
                                 height={260}
-                                src={`http://localhost:8000/images_back/${schoolId}/${item}`}
-
+                                src={`http://localhost:8000/images_back/${schoolId}.jpg`}
                             />
                         ))}
                     </Carousel>

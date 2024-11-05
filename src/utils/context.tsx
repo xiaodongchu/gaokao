@@ -60,7 +60,7 @@ export const GaokaoInfoProvider = ({ children }: { children: any }) => {
     const [info, setInfo] = useState<any>(initgaokaoInfo)
 
     const loadGaokaoInfo = async () => {
-        const res = await axiosInstance.get(`http://localhost:8000/getGaokaoInfo/`)
+        const res = await axiosInstance.get(`/getGaokaoInfo`)
 
         const data = res.data.data
         const username = data.username

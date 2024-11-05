@@ -7,6 +7,7 @@ import SchoolSpecial from './schoolSpecial'
 import SchoolJob from './schoolJob'
 import axios from 'axios'
 import styles from './index.module.css'
+import axiosInstance from "../../router/axiosInstance";
 
 
 interface SchoolDetailProps {
@@ -71,7 +72,7 @@ export default function SchoolDetail() {
 
 
     const loadSchoolDetail = async () => {
-        const res = await axios.get(`http://localhost:8000/getSchoolDetail/${schoolId}`)
+        const res = await axiosInstance.get(`/getSchoolDetail/${schoolId}`)
         console.log('schoolDetail', res.data)
         if (res.data.code === 200) {
             messageApi.open({

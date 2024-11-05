@@ -43,7 +43,7 @@ export default function SpecialDetail() {
 
 
     const loadSpecialDetail = async () => {
-        const res = await axiosInstance.get(`http://localhost:8000/getSpecialDetail/${specialId}`)
+        const res = await axiosInstance.get(`/getSpecialDetail/${specialId}`)
         if (res.data.code === 200) {
             messageApi.open({
                 type: 'success',

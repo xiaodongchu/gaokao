@@ -67,7 +67,7 @@ export default function InfoModal({ modalOpen, setModalOpen }: { modalOpen: bool
     const onFinish = async (values: any) => {
         setModalOpen(false)
         setInfo({ values, isFirst: false, modify: !info.modify })
-        const res = await axiosInstance.post('http://localhost:8000/updataGaokaoInfo', {
+        const res = await axiosInstance.post('/updataGaokaoInfo', {
             username: username,
             province: values.province,
             subjects: values.subjects.join(','),

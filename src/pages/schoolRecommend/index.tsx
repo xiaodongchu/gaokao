@@ -25,7 +25,7 @@ export default function SchoolRecommend() {
 
     const loadSchoolList = async () => {
         setLoading(true)
-        const res = await axiosInstance.post('http://localhost:8000/recommend', {
+        const res = await axiosInstance.post('/recommend', {
             choose_list: info.values.subjects.toString(),
             rank: info.values.rank,
             province: info.values.province,
@@ -95,7 +95,7 @@ export default function SchoolRecommend() {
 
     const handleClick = async ({ school_name, school_id, risk ,special_name}: any, e: any) => {
         e.stopPropagation();
-        const res = await axiosInstance.post('http://localhost:8000/addVolunteer', {
+        const res = await axiosInstance.post('/addVolunteer', {
             school_name: school_name,
             special_name: special_name,
             school_id: school_id,

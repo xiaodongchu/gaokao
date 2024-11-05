@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'
 import { Card, Input, Button, Form, Table, message } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import axiosInstance from "../../router/axiosInstance";
 
 const { Search } = Input
 
@@ -69,7 +70,7 @@ export default function SpecialInfo() {
 
     const loadSpecialList = async (values: any) => {
         console.log('1page', curPage)
-        const res = await axios.post('http://localhost:8000/getSpecialList', {
+        const res = await axiosInstance.post('/getSpecialList', {
             ml: values.ml || '',
             zyl: values.zyl || '',
             zymc: values.zymc || '',

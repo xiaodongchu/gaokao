@@ -5,6 +5,7 @@ import { Form, Input, Button, message, Space, Checkbox, Tabs } from 'antd'
 import { LoginForm, ProFormCheckbox, ProFormText } from '@ant-design/pro-components';
 import { useNavigate, Link } from 'react-router-dom'
 import axios from 'axios'
+import axiosInstance from "../../router/axiosInstance";
 
 export default function Register() {
 
@@ -12,7 +13,7 @@ export default function Register() {
     const [messageApi, contextHolder] = message.useMessage();
     const onFinish = async (values: any) => {
         console.log('Received values of form: ', values)
-        const res = await axios.post('http://localhost:8000/register', values)
+        const res = await axiosInstance.post('/register', values)
         if (res.data.code === 200) {
             messageApi.open({
                 type: 'success',
