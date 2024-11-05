@@ -221,31 +221,36 @@ export default function SchoolIntro({ schoolDetail }: { schoolDetail: SchoolDeta
                         effect="fade">
                         {schoolImgName.map((item, index) => (
                             <Image
-                                style={{ objectFit: 'cover' }}
+                                style={{objectFit: 'cover'}}
                                 key={index}
-                                width={500}
-                                height={260}
+                                width={400}
+                                height={300}
                                 src={`http://localhost:8000/images_back/${schoolId}.jpg`}
                             />
                         ))}
                     </Carousel>
+                </div>
+                <div className={styles.topBox}>
                     <div className={styles.introBox}>
                         <div className={styles.schoolScore}>
                             {[lifeScore, jobScore, studyScore, comprehensiveScore].map((item, index) => (
-                                <Card key={index} hoverable className={styles.card} bordered={false}>
-                                    <Statistic
-                                        title={scoreList[index]}
-                                        value={item}
-                                        precision={1}
-                                        valueStyle={{ color: '#3f8600', textAlign: 'center' }}
-                                    />
-                                </Card>
+                                <div key={index} className={styles.card1}
+                                     style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+                                    <Card hoverable bordered={false}>
+                                        <Statistic
+                                            title={scoreList[index]}
+                                            value={item}
+                                            precision={1}
+                                            valueStyle={{color: '#3f8600'}}
+                                        />
+                                    </Card>
+                                </div>
                             ))}
                         </div>
                         <Card
                             hoverable
                             className={styles.schoolCard}
-                            classNames={{ body: styles.antdCardBody }}
+                            classNames={{body: styles.antdCardBody}}
                         >
                             <Paragraph
                                 ellipsis={{
@@ -262,8 +267,11 @@ export default function SchoolIntro({ schoolDetail }: { schoolDetail: SchoolDeta
                     </div>
                 </div>
                 <div className={styles.chartBox}>
-                    <DemoChart title='国家实验点' num={[num_lab, num_subject, num_master, num_doctor]} numList={numList} />
-                    <DemoChart title='国家学科' num={Object.values(xueke_rank!)} numList={Object.keys(xueke_rank!)} />
+                    <DemoChart title='国家实验点' num={[num_lab, num_subject, num_master, num_doctor]}
+                               numList={numList}/>
+                </div>
+                <div className={styles.chartBox}>
+                    <DemoChart title='国家学科' num={Object.values(xueke_rank!)} numList={Object.keys(xueke_rank!)}/>
                 </div>
             </div>
         </>

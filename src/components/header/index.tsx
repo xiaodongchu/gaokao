@@ -42,13 +42,14 @@ export default function Header() {
                     label: 'logout',
                     key: 'logout',
                 },
+                {
+                    label: '我的志愿表',
+                    key: 'myvolunteer',
+                },
             ]
         },
-        {
-            label: '我的志愿表',
-            key: 'myvolunteer',
-        },
     ];
+    const [isCollapsed, setIsCollapsed] = useState(true); // 初始状态为折叠
 
     const { info, setInfo } = useContext(gaokaoContext)
     console.log('header info', info)

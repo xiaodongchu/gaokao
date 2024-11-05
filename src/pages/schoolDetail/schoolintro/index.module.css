@@ -1,9 +1,10 @@
 .container {
-    padding: 10px;
     width: 100%;
 }
 
 .topBox {
+    margin-bottom: 20px;
+    margin-top: 20px;
     width: 100%;
     height: 270px;
     display: flex;
@@ -19,23 +20,17 @@
 
 .introBox {
     flex: 1;
-    margin-left: 20px;
-    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
-    /* padding: 0 15px; */
-    /* background-color: red; */
-
 }
 
 .schoolScore {
+    margin-bottom: 10px;
     display: flex;
     width: 100%;
-    /* height: 40%; */
     justify-content: space-between;
-    align-items: center;
 }
 
 .schoolNum {
@@ -45,16 +40,17 @@
     align-items: center;
 }
 
-.card {
+.card1 {
     flex: 1;
-    margin: 0px 5px;
-    height: 90px;
+    margin: 5px;
+    height: auto;
+    align-items: center;
 }
 
 
 .schoolCard {
     width: 100%;
-
+    margin-bottom: 10px;
 }
 
 .antdCardBody {
