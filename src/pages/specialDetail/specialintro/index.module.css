@@ -1,0 +1,30 @@
+.container {
+    padding: 10px;
+}
+
+.introBox {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.scoreBox {
+    width: 48%;
+    height: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.progressBox {
+    width: 48%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.textBox {
+    margin-top: 20px;
+}

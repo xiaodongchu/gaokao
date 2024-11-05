@@ -1,0 +1,29 @@
+.container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.specialCard {
+    width: 100%;
+    height: 55px;
+    margin-bottom: 20px;
+
+}
+
+.antdCardBody {
+    width: 100%;
+    height: 100%;
+    padding: 5px 5px !important;
+}
+
+.searchForm {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.specialTable {
+    text-align: center;
+}

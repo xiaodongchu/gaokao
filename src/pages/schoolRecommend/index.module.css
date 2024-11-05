@@ -1,0 +1,87 @@
+.container {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.schoolSearch {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+.searchIpt {
+    width: 30%;
+}
+
+
+.schoolList {
+    margin-bottom: 20px;
+    min-height: 100vh;
+}
+
+.schoolCard {
+    width: 85%;
+    height: 110px;
+    margin: 0 auto;
+
+}
+
+.antdCardBody {
+    width: 100%;
+    height: 100%;
+    padding: 5px 20px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.schoolBasic {
+    width: 60%;
+    height: 100%;
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.name {
+    font-weight: 700;
+    font-size: 18px;
+    height: 24px;
+    line-height: 24px;
+}
+
+.address {
+    text-align: center;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    border: 1px solid #eee;
+    padding: 0 10px;
+    margin: 0 0 0 15px;
+}
+
+.info {
+    color: #bcb4b4;
+}
+
+.button {
+    position: absolute;
+    bottom: -1px;
+    right: -1px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+}

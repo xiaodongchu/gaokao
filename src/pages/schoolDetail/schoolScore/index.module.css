@@ -1,0 +1,17 @@
+.container {
+    padding: 10px;
+    width: 100%;
+}
+
+.selectContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.azymc{
+    max-width: 50%;
+    width: 30%;
+}
+
+.schoolContainer {}
