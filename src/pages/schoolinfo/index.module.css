@@ -5,7 +5,7 @@
 
 
 .schoolSearch {
-    width: 80%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -14,7 +14,7 @@
 }
 
 .searchIpt {
-    width: 30%;
+    width: 80%;
 }
 
 .schoolList {
@@ -38,7 +38,7 @@
 }
 
 .schoolBasic {
-    width: 60%;
+    width: 80%;
     height: 100%;
     margin-left: 20px;
     display: flex;
@@ -49,7 +49,6 @@
 
 .title {
     display: flex;
-    justify-content: space-around;
     align-items: center;
 }
 

@@ -106,15 +106,6 @@ export default function SchoolInfo() {
                         enterButton
                         className={styles.searchIpt}
                     />
-
-                    <Select options={selectOptions} onSelect={onselect} style={{ width: '25%' }} value={selectProvince} />
-                    <Radio.Group onChange={onRadioChange} value={radioValue} buttonStyle="solid">
-                        <Radio.Button value="全部">全部</Radio.Button>
-                        <Radio.Button value="985">985</Radio.Button>
-                        <Radio.Button value="211">211</Radio.Button>
-                        <Radio.Button value="双一流">双一流</Radio.Button>
-                        <Radio.Button value="其他">其他</Radio.Button>
-                    </Radio.Group>
                 </div>
 
                 <div className={styles.schoolList}>
@@ -140,13 +131,13 @@ export default function SchoolInfo() {
                                         }}
                                     >
                                         <Image
-                                            width={100}
+                                            width={50}
                                             src={`http://localhost:8000/images/${item.id}.jpg`}
                                         />
                                         <div className={styles.schoolBasic}>
                                             <div className={styles.title}>
                                                 <div className={styles.name}>{item.name}</div>
-                                                <div className={styles.address}>{item.province}, {item.city}</div>
+                                                <div className={styles.address}>{item.province}</div>
                                             </div>
                                             <div className={styles.info}>
                                                 {item.f985 === '1' ?
@@ -164,12 +155,8 @@ export default function SchoolInfo() {
                                                 {item.dual_class === '1' ?
                                                     <>
                                                         双一流
-                                                        <Divider type="vertical" />
                                                     </>
                                                     : null}
-                                                {item.nature}
-                                                <Divider type="vertical" />
-                                                {item.level}
                                             </div>
                                         </div>
                                     </Card>

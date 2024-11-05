@@ -3,7 +3,7 @@ import axios, { AxiosRequestConfig, AxiosError } from 'axios';
 
 // 创建 Axios 实例
 const axiosInstance = axios.create({
-    baseURL: 'http://127.0.0.1:8000', // 替换为你的后端地址
+    baseURL: 'http://10.242.61.169:8000', // 替换为你的后端地址
     timeout: 10000, // 请求超时时间
 });
 

@@ -22,6 +22,14 @@ body {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
 }
 
+/* App.css 或 global.css */
+html, body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
 
 h1,
 h2,
@@ -88,6 +96,5 @@ textarea {
 
 table {
   border-collapse: collapse;
-  border-spacing: 10;
   border: 1px solid #ccc;
 }

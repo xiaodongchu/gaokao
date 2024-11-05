@@ -3,3 +3,8 @@
     width: 80%;
     margin: 0 auto;
 }
+html, body {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
