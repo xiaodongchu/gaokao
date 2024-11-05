@@ -85,26 +85,23 @@ export default function SpecialDetail() {
                                 <Tag color="#f50">人气值：{specialDetail.hot}</Tag>
                             </div>
                             <div className={styles.info}>
-                                <Space>
-                                    <Tag color="cyan">学历层次</Tag>
-                                    {specialDetail.level}
-                                    <Divider type="vertical" />
-                                    <Tag color="cyan">专业代码</Tag>
-                                    {specialDetail.id}
-                                    <Divider type="vertical" />
-                                    <Tag color="cyan">门类</Tag>
-                                    {specialDetail.type}
-                                    <Divider type="vertical" />
-                                    <Tag color="cyan">专业类</Tag>
-                                    {specialDetail.type_detail}
-                                    <Divider type="vertical" />
-                                    <Tag color="cyan">修学年限</Tag>
-                                    {specialDetail.limit_year}
-                                    <Divider type="vertical" />
-                                    <Tag color="cyan">授予学位</Tag>
-                                    {specialDetail.degree}
-                                </Space>
-
+                                <Tag color="cyan">学历层次</Tag>
+                                {specialDetail.level}
+                                <Divider type="vertical" />
+                                <Tag color="cyan">专业代码</Tag>
+                                {specialDetail.id}
+                                <Divider type="vertical" />
+                                <Tag color="cyan">门类</Tag>
+                                {specialDetail.type}
+                                <Divider type="vertical" />
+                                <Tag color="cyan">专业类</Tag>
+                                {specialDetail.type_detail}
+                                <Divider type="vertical" />
+                                <Tag color="cyan">修学年限</Tag>
+                                {specialDetail.limit_year}
+                                <Divider type="vertical" />
+                                <Tag color="cyan">授予学位</Tag>
+                                {specialDetail.degree}
                             </div>
                         </Card>
                     </div>

@@ -35,13 +35,6 @@ export default function SpecialIntro({ specialDetail }: { specialDetail: any }) 
                             ))
                         }
                     </Space>
-                    <div className={styles.progressBox}>
-                        <div style={{ marginRight: 'calc(2em + 8px)' }}>男</div>
-                        <Tooltip title={`男女比例   ${manRate[0]} : ${manRate[1]}`}>
-                            <Progress format={(percent) => ``} size={['100%', 20]} percent={100} success={{ percent: parseFloat(manRate[0]) }} />
-                        </Tooltip>
-                        <div>女</div>
-                    </div>
                 </div>
                 <Card hoverable className={styles.textBox}>
                     <Typography>

@@ -19,11 +19,6 @@ const columns = [
 
     },
     {
-        title: '门类',
-        dataIndex: 'ml',
-        key: 'ml',
-    },
-    {
         title: '专业类',
         dataIndex: 'zyl',
         key: 'zyl',
@@ -37,11 +32,6 @@ const columns = [
         title: '修学年限',
         key: 'limit_year',
         dataIndex: 'limit_year',
-    },
-    {
-        title: '授予学位',
-        key: 'degree',
-        dataIndex: 'degree',
     }
 ];
 
@@ -118,23 +108,14 @@ export default function SpecialInfo() {
                         layout='inline'
                         className={styles.searchForm}
                     >
-                        <Form.Item name="ml">
-                            <Input allowClear placeholder="搜索门类" />
-                        </Form.Item>
-                        <Form.Item name="zyl">
-                            <Input allowClear placeholder="搜索专业类" />
-                        </Form.Item>
                         <Form.Item name="zymc">
-                            <Input allowClear placeholder="搜索专业名称" />
+                            <Input allowClear placeholder="搜索专业名称"/>
                         </Form.Item>
-                        <Form.Item name="zydm">
-                            <Input allowClear placeholder="搜索专业代码" />
-                        </Form.Item>
-                        <Form.Item >
+                        {/* <Form.Item >
                             <Button type="primary" htmlType="reset">
                                 重置
                             </Button>
-                        </Form.Item>
+                        </Form.Item> */}
                         <Form.Item >
                             <Button type="primary" htmlType="submit">
                                 搜索
@@ -150,12 +131,10 @@ export default function SpecialInfo() {
                     dataSource={specialList.map((item: any, index: number) => (
                         {
                             key: item.id,
-                            ml: item.type,
                             zyl: item.type_detail,
                             zymc: item.name,
                             zydm: item.id,
                             limit_year: item.limit_year,
-                            degree: item.degree
                         }
                     ))}
                     pagination={{
