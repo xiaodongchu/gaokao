@@ -116,24 +116,37 @@ export default function SchoolRecommend() {
         console.log('radio checked', e.target.value);
 
     }
+
+    const render211 = (item: any) => {
+        if (item.f985 === '1') {
+            return (
+                <>
+                    985
+                    <Divider type="vertical" />
+                </>
+            );
+        } else if (item.f211 === '1') {
+            return (
+                <>
+                    211
+                    <Divider type="vertical" />
+                </>
+            );
+        }
+        // 如果没有符合的条件，可以返回 null 或者其他内容
+        return null;
+    };
+
     return (
         <>
             {contextHolder}
             <div className={styles.container}>
                 <div className={styles.schoolSearch}>
-
-                    <Select options={provinceOptions} onSelect={onSelect} style={{ width: '25%' }} value={selectProvince} />
-                    <Radio.Group onChange={onLevelChange} value={levelValue} buttonStyle="solid">
-                        <Radio.Button value="全部">全部</Radio.Button>
-                        <Radio.Button value="985">985</Radio.Button>
-                        <Radio.Button value="211">211</Radio.Button>
-                        <Radio.Button value="双一流">双一流</Radio.Button>
-                    </Radio.Group>
                     <Radio.Group onChange={onRiskChange} value={riskValue} buttonStyle="solid">
                         <Radio.Button value="全部">全部</Radio.Button>
-                        <Radio.Button value="高">录取概率高</Radio.Button>
-                        <Radio.Button value="中">录取概率中</Radio.Button>
-                        <Radio.Button value="低">录取概率低</Radio.Button>
+                        <Radio.Button value="高">高</Radio.Button>
+                        <Radio.Button value="中">中</Radio.Button>
+                        <Radio.Button value="低">低</Radio.Button>
                     </Radio.Group>
                 </div>
 
@@ -158,7 +171,7 @@ export default function SchoolRecommend() {
                                             }}
                                         >
                                             <Image
-                                                width={100}
+                                                width={50}
                                                 src={`http://localhost:8000/images/${item.id}.jpg`}
                                             />
                                             <div className={styles.schoolBasic}>
@@ -167,34 +180,24 @@ export default function SchoolRecommend() {
                                                     <div className={styles.address}>{item.special_name}</div>
                                                 </div>
                                                 <div className={styles.info}>
-                                                    {item.f985 === '1' ?
-                                                        <>
-                                                            985
-                                                            <Divider type="vertical" />
-                                                        </>
-                                                        : null}
-                                                    {item.f211 === '1' ?
-                                                        <>
-                                                            211
-                                                            <Divider type="vertical" />
-                                                        </>
-                                                        : null}
+                                                    {render211(item)}
                                                     {item.dual_class === '1' ?
                                                         <>
                                                             双一流
                                                             <Divider type="vertical" />
+                                                            <br/>
                                                         </>
                                                         : null}
-                                                    最低排名：{parseInt(item.rank) + 1}
+                                                    {parseInt(item.rank) + 1}
                                                     <Divider type="vertical" />
-                                                    录取概率：<span style={{ color: 'red' }}>{item.risk}</span>
+                                                    <span style={{ color: 'red' }}>{item.risk}</span>
                                                 </div>
                                             </div>
                                             <Button
                                                 onClick={(e) => handleClick({ school_name: item.name, school_id: item.id, risk: item.risk ,special_name:item.special_name}, e)}
                                                 className={styles.button}
                                                 type="primary">
-                                                + 志愿表
+                                                +
                                             </Button>
                                         </Card>
                                     )

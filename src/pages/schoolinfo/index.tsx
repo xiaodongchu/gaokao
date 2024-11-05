@@ -106,6 +106,7 @@ export default function SchoolInfo() {
                         enterButton
                         className={styles.searchIpt}
                     />
+                    <Select options={selectOptions} onSelect={onselect} style={{ width: '25%' }} value={selectProvince} />
                 </div>
 
                 <div className={styles.schoolList}>

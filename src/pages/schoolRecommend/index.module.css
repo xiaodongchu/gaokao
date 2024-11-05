@@ -23,23 +23,22 @@
 }
 
 .schoolCard {
-    width: 85%;
+    width: 100%;
     height: 110px;
-    margin: 0 auto;
-
+    margin: 1px;
 }
 
 .antdCardBody {
     width: 100%;
     height: 100%;
-    padding: 5px 20px !important;
+    padding: 3px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .schoolBasic {
-    width: 60%;
+    width: 80%;
     height: 100%;
     margin-left: 20px;
     display: flex;
