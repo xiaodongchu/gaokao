@@ -70,11 +70,6 @@ export default function SchoolScore() {
             key: 'lqpc',
         },
         {
-            title: '招生类型',
-            dataIndex: 'zslx',
-            key: 'zslx',
-        },
-        {
             title: '最低分',
             dataIndex: 'zdf',
             key: 'zdf',
